@@ -35,3 +35,20 @@ To get a local copy up and running, follow these simple steps.
 
 1. **Clone the repository**
    Navigate to your XAMPP `htdocs` folder (usually `C:\xampp\htdocs` on Windows or `/Applications/XAMPP/htdocs` on Mac) and clone the repo
+
+### SCREENS: 
+
+Login
+<img width="1917" height="938" alt="image" src="https://github.com/user-attachments/assets/272055a3-a956-4cb7-a30a-6a147538d0f0" />
+
+Admin
+<img width="1917" height="938" alt="image" src="https://github.com/user-attachments/assets/4ba2acad-ab8a-4471-bd35-9d44019beced" />
+
+Student
+<img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/4009203b-02d8-40cd-bf00-fa6e914e1304" />
+
+Staff
+<img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/34ed2c2d-61f7-4115-b2c5-7bc80b9fb9d0" />
+
+
+
