@@ -35,5 +35,3 @@ To get a local copy up and running, follow these simple steps.
 
 1. **Clone the repository**
    Navigate to your XAMPP `htdocs` folder (usually `C:\xampp\htdocs` on Windows or `/Applications/XAMPP/htdocs` on Mac) and clone the repo:
-```bash
-   git clone [https://github.com/yourusername/PrintPress.git](https://github.com/yourusername/PrintPress.git)
