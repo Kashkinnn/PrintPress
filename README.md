@@ -34,4 +34,4 @@ To get a local copy up and running, follow these simple steps.
 ### Installation
 
 1. **Clone the repository**
-   Navigate to your XAMPP `htdocs` folder (usually `C:\xampp\htdocs` on Windows or `/Applications/XAMPP/htdocs` on Mac) and clone the repo:
+   Navigate to your XAMPP `htdocs` folder (usually `C:\xampp\htdocs` on Windows or `/Applications/XAMPP/htdocs` on Mac) and clone the repo
