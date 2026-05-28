@@ -23,10 +23,7 @@ if (!isset($showNav)) {
 
 <header class="pp-navbar">
   <a class="pp-navbar-brand" href="index.php">
-    <img src="images/cit_logo.png" alt="CIT-U" onerror="this.style.display='none'">
     <div class="pp-brand-school">
-      <span>Cebu Institute of Technology</span>
-      <span>University</span>
     </div>
     <div class="pp-brand-divider"></div>
     <div class="pp-brand-name">
