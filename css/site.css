@@ -1,0 +1,1039 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap");
+
+:root {
+    --maroon: #7b1c2e;
+    --maroon-dark: #5a1220;
+    --maroon-light: #9e2438;
+    --gold: #c9a84c;
+    --gold-light: #e0c06a;
+    --gold-pale: #f5edd8;
+    --cream: #fdfaf4;
+    --white: #ffffff;
+    --gray-100: #f8f8f6;
+    --gray-200: #ececea;
+    --gray-400: #9e9e99;
+    --gray-600: #5a5a56;
+    --gray-800: #2a2a28;
+    --success: #2d7a4f;
+    --danger: #c0392b;
+    --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --radius: 6px;
+    --radius-lg: 12px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    background: var(--cream);
+    color: var(--gray-800);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ─── NAVBAR ─────────────────────────────── */
+.pp-navbar {
+    background: var(--white);
+    border-bottom: 3px solid var(--maroon);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.pp-navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.pp-navbar-brand img {
+    height: 44px;
+    width: auto;
+}
+
+.pp-brand-school {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.pp-brand-school span:first-child {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--maroon);
+    text-transform: uppercase;
+}
+
+.pp-brand-school span:last-child {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    color: var(--gray-600);
+    text-transform: uppercase;
+}
+
+.pp-brand-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--gray-200);
+}
+
+.pp-brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.pp-brand-the {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--gray-400);
+    letter-spacing: 0.05em;
+}
+
+.pp-brand-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--gray-800);
+    letter-spacing: -0.01em;
+}
+
+.pp-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pp-nav-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.pp-nav-link:hover {
+    color: var(--maroon);
+}
+
+.pp-nav-badge {
+    background: var(--maroon);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+}
+
+.pp-nav-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--gray-800);
+    font-weight: 500;
+}
+
+.pp-nav-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--maroon);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.pp-logout-btn {
+    background: none;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.78rem;
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.pp-logout-btn:hover {
+    border-color: var(--maroon);
+    color: var(--maroon);
+}
+
+/* ─── MAIN WRAPPER ───────────────────────────── */
+.pp-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ─── LOGIN PAGE ─────────────────────────────── */
+.pp-login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+}
+
+.pp-login-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.pp-login-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-top: 4px solid var(--maroon);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: var(--shadow-lg);
+}
+
+.pp-login-heading {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.pp-login-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+}
+
+.pp-login-heading p {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    letter-spacing: 0.02em;
+}
+
+.pp-form-group {
+    margin-bottom: 1.1rem;
+}
+
+.pp-form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+
+.pp-input {
+    width: 100%;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--gray-800);
+    background: var(--gray-100);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.pp-input:focus {
+    border-color: var(--maroon);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(123, 28, 46, 0.08);
+}
+
+.pp-input::placeholder {
+    color: var(--gray-400);
+}
+
+.pp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.pp-btn-primary {
+    background: var(--maroon);
+    color: var(--white);
+    width: 100%;
+}
+
+.pp-btn-primary:hover {
+    background: var(--maroon-dark);
+    box-shadow: 0 4px 12px rgba(123, 28, 46, 0.25);
+    transform: translateY(-1px);
+}
+
+.pp-btn-secondary {
+    background: var(--white);
+    color: var(--maroon);
+    border: 1.5px solid var(--maroon);
+}
+
+.pp-btn-secondary:hover {
+    background: var(--maroon);
+    color: var(--white);
+}
+
+.pp-btn-sm {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.9rem;
+}
+
+.pp-btn-danger {
+    background: var(--danger);
+    color: var(--white);
+}
+
+.pp-btn-danger:hover {
+    background: #a93226;
+}
+
+.pp-btn-success {
+    background: var(--success);
+    color: var(--white);
+}
+
+.pp-login-alt {
+    text-align: center;
+    margin-top: 1.1rem;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+.pp-login-alt a {
+    color: var(--maroon);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ─── ALERT ──────────────────────────────────── */
+.pp-alert {
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.83rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.pp-alert-danger {
+    background: #fdf0ef;
+    color: var(--danger);
+    border: 1px solid #f5c6c3;
+}
+.pp-alert-success {
+    background: #edf7f1;
+    color: var(--success);
+    border: 1px solid #b8dfc8;
+}
+.pp-alert-info {
+    background: #edf3fd;
+    color: #2c5fa8;
+    border: 1px solid #b8cfef;
+}
+
+/* ─── DASHBOARD GRID ─────────────────────────── */
+.pp-section-title {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--maroon);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--gold);
+}
+
+.pp-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+}
+
+.pp-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.pp-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* ─── STATIONS TABLE ─────────────────────────── */
+.pp-station-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.pp-station-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    padding: 0 0.5rem 0.6rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.pp-station-table th:last-child {
+    text-align: center;
+}
+
+.pp-station-table td {
+    padding: 0.6rem 0.5rem 0.6rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-800);
+    vertical-align: middle;
+}
+
+.pp-station-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pp-station-group {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+    padding: 0.9rem 0 0.3rem 0;
+}
+
+.pp-station-name {
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+.pp-avail-cell {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.pp-check {
+    color: var(--success);
+    font-size: 0.9rem;
+}
+
+.pp-cross {
+    color: var(--danger);
+    font-size: 0.9rem;
+}
+
+.pp-pay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.66rem;
+    font-weight: 600;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+
+.pp-pay-gcash {
+    background: #e8f4ff;
+    color: #0070d1;
+}
+.pp-pay-paymaya {
+    background: #f0faf0;
+    color: #2a7a2a;
+}
+.pp-pay-cash {
+    background: #fff8e8;
+    color: #8a6200;
+}
+
+/* ─── RESOURCES TABLE ────────────────────────── */
+.pp-resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.pp-resources-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    padding: 0 0 0.6rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.pp-resources-table th:last-child {
+    text-align: right;
+}
+
+.pp-resources-table td {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-800);
+}
+
+.pp-resources-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pp-resources-table td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pp-res-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+.pp-price {
+    text-align: right;
+    font-weight: 600;
+    color: var(--maroon);
+    font-size: 0.82rem;
+}
+
+.pp-res-group-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-400);
+    padding: 0.9rem 0 0.3rem;
+}
+
+/* ─── ACTION BAR ─────────────────────────────── */
+.pp-action-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.pp-page-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.pp-page-sub {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    margin-top: 0.15rem;
+}
+
+/* ─── STAT CARDS ─────────────────────────────── */
+.pp-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.pp-stat-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.pp-stat-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-400);
+}
+
+.pp-stat-value {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--maroon);
+    line-height: 1;
+}
+
+.pp-stat-note {
+    font-size: 0.75rem;
+    color: var(--success);
+    font-weight: 500;
+}
+
+/* ─── ROLE BADGE ─────────────────────────────── */
+.pp-role-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+}
+
+.pp-role-admin {
+    background: #fdf0ef;
+    color: var(--danger);
+}
+.pp-role-staff {
+    background: #edf3fd;
+    color: #2c5fa8;
+}
+.pp-role-student {
+    background: #edf7f1;
+    color: var(--success);
+}
+
+/* ─── FOOTER ─────────────────────────────────── */
+.pp-footer {
+    border-top: 1px solid var(--gray-200);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    background: var(--white);
+    letter-spacing: 0.03em;
+}
+
+/* ─── UTILS ──────────────────────────────────── */
+.text-center {
+    text-align: center;
+}
+.mt-1 {
+    margin-top: 0.5rem;
+}
+.mt-2 {
+    margin-top: 1rem;
+}
+.mt-3 {
+    margin-top: 1.5rem;
+}
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 1rem;
+}
+.flex {
+    display: flex;
+}
+.flex-gap {
+    gap: 0.5rem;
+}
+.items-center {
+    align-items: center;
+}
+
+/* ─── ADMIN PAGES ────────────────────────────── */
+.pp-admin-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+.pp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+}
+
+.pp-breadcrumb a {
+    color: var(--maroon);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pp-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.pp-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.pp-admin-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    padding: 0 0.75rem 0.6rem 0;
+    border-bottom: 2px solid var(--gray-200);
+    white-space: nowrap;
+}
+
+.pp-admin-table td {
+    padding: 0.65rem 0.75rem 0.65rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-800);
+    vertical-align: middle;
+}
+
+.pp-admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pp-admin-table tr:hover td {
+    background: var(--gray-100);
+}
+
+.pp-row-warn td {
+    background: #fff8e8;
+}
+.pp-row-warn:hover td {
+    background: #fff0d0;
+}
+
+.pp-table-empty {
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.82rem;
+    padding: 2rem 0 !important;
+}
+
+.pp-td-id {
+    color: var(--gray-400);
+    font-size: 0.78rem;
+    font-weight: 600;
+    width: 40px;
+}
+
+.pp-action-btns {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.pp-status-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+}
+
+.pp-status-ok {
+    background: #edf7f1;
+    color: var(--success);
+}
+.pp-status-warn {
+    background: #fff8e8;
+    color: #8a5500;
+}
+.pp-status-err {
+    background: #fdf0ef;
+    color: var(--danger);
+}
+
+.pp-checkbox-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pp-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.pp-checkbox-label input[type="checkbox"] {
+    accent-color: var(--maroon);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+select.pp-input {
+    cursor: pointer;
+    appearance: auto;
+}
+
+/* ─── PRINT JOB FORM ─────────────────────────────── */
+.pp-file-drop {
+    border: 2px dashed var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+    cursor: pointer;
+}
+
+.pp-file-drop:hover,
+.pp-file-drag {
+    border-color: var(--maroon);
+    background: var(--gold-pale);
+}
+
+.pp-file-drop-inner {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.pp-file-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pp-file-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--gray-600);
+}
+
+.pp-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.pp-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    cursor: pointer;
+    padding: 0.65rem 0.9rem;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius);
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+.pp-radio-label:has(input:checked) {
+    border-color: var(--maroon);
+    background: #fdf5f6;
+}
+
+.pp-radio-label input[type="radio"] {
+    accent-color: var(--maroon);
+    width: 16px;
+    height: 16px;
+}
+
+.pp-price-tag {
+    margin-left: auto;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--maroon);
+    background: var(--gold-pale);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+}
+
+.pp-price-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gray-100);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    margin: 1.25rem 0 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.pp-price-total {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--maroon);
+}
+
+/* ─── STAFF JOB CARDS ────────────────────────────── */
+.pp-job-card {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--white);
+    transition: box-shadow 0.2s;
+}
+
+.pp-job-card:hover {
+    box-shadow: var(--shadow-md);
+}
+.pp-job-card:last-child {
+    margin-bottom: 0;
+}
+
+.pp-job-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.65rem;
+}
+
+.pp-job-id {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--gray-400);
+    margin-right: 0.5rem;
+}
+
+.pp-job-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem 1rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+}
+
+.pp-job-details div {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.pp-job-details span {
+    color: var(--gray-400);
+    min-width: 55px;
+}
+
+.pp-job-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pp-status-info {
+    background: #edf3fd;
+    color: #2c5fa8;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+/* ─── STATION INFO CARDS (student inventory view) ── */
+.pp-station-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.pp-station-info-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.1rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s;
+}
+
+.pp-station-info-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.pp-station-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    gap: 0.5rem;
+}
+
+.pp-station-info-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--gray-800);
+    flex: 1;
+}
+
+.pp-station-info-payments {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
